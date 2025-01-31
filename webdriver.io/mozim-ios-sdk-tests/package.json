@@ -1,0 +1,23 @@
+{
+  "name": "mozim-sdk-tester-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run /Users/codeautomation/Desktop/appTest/mozim-ios-sdk-tests 2/test/specs/ActionsTest.js",
+    "test:all": "wdio wdio.conf.js",
+    "test:single": "wdio wdio.conf.js --spec",
+    "all_actions": "./node_modules/.bin/wdio ./local/test.conf.js",
+    "wdio": "wdio run ./wdio.conf.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@wdio/cli": "^8.24.13",
+    "@wdio/local-runner": "^8.24.12",
+    "@wdio/mocha-framework": "^8.24.12",
+    "@wdio/types": "^8.24.12",
+    "assert": "^2.1.0",
+    "ts-node": "^10.9.1"
+  }
+}

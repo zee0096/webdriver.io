@@ -1,0 +1,102 @@
+{
+  "extends": [
+    "airbnb-base",
+    "plugin:wdio/recommended"
+  ],
+  "env": {
+    "mocha": true,
+    "es2021": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "plugins": [
+    "mocha",
+    "no-only-tests",
+    "wdio"
+  ],
+  "globals": {
+    "browser": true,
+    "$": true,
+    "$$": true,
+    // these variables were declared in wdio.conf.js file
+    "expect": "readonly",
+    "config": "readonly"
+  },
+  "rules": {
+    "max-len": [
+      2,
+      {
+        "code": 120,
+        "tabWidth": 2,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTrailingComments": true,
+        "ignoreComments": true
+      }
+    ],
+    "class-methods-use-this": "off",
+    "no-plusplus": [
+      2,
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "key-spacing": [
+      "error",
+      {
+        "align": "colon",
+        "beforeColon": true
+      }
+    ],
+    "func-names": "off",
+    "no-unreachable": "off",
+    "mocha/no-skipped-tests": "error",
+    "mocha/no-exclusive-tests": "error",
+    "mocha/no-mocha-arrows": "off",
+    "mocha/no-setup-in-describe": "off",
+    "mocha/max-top-level-suites": [
+      "warn",
+      {
+        "limit": 6
+      }
+    ],
+    "mocha/valid-test-description": [
+      "error",
+      {
+        "pattern": "^C[0-9]{4,6} *",
+        "testNames": [
+          "it",
+          "itSkipIf",
+          "specify",
+          "test",
+          "mytestname"
+        ],
+        "message": "the test should starts with C and testID number (ex. C99999 Description)"
+      }
+    ],
+    "mocha/no-top-level-hooks": "off",
+    "linebreak-style": "off",
+    "no-only-tests/no-only-tests": "error",
+    "comma-dangle": "off"
+  },
+  "settings": {
+    "mocha/additionalCustomNames": [
+      {
+        "name": "describeModule",
+        "type": "suite",
+        "interfaces": [
+          "BDD"
+        ]
+      },
+      {
+        "name": "testModule",
+        "type": "testCase",
+        "interfaces": [
+          "TDD"
+        ]
+      }
+    ]
+  }
+}

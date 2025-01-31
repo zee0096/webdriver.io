@@ -1,0 +1,72 @@
+{
+  "name": "wdio-v7",
+  "version": "1.0.0",
+  "description": "Migration of WebdriverIO from version 4 to version 7",
+  "author": "Marco Tulio Ribeiro",
+  "license": "ISC",
+  "main": "wdio.conf.js",
+  "engines": {
+    "node": "^14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Salesfloor/wdioTest.git"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "@mocha/docdash": "^4.0.1",
+    "@supercharge/strings": "^1.28.0",
+    "@wdio/allure-reporter": "^7.20.0",
+    "@wdio/cli": "^7.20.2",
+    "@wdio/local-runner": "^7.20.2",
+    "@wdio/mocha-framework": "^7.20.0",
+    "@wdio/spec-reporter": "^7.20.0",
+    "@wdio/sync": "^7.20.2",
+    "@wdio/types": "^7.20.0",
+    "allure-commandline": "^2.17.2",
+    "appium": "^1.22.3",
+    "chromedriver": "^112.0.0",
+    "config": "^3.3.7",
+    "deepmerge": "^4.2.2",
+    "fs-extra": "^10.1.0",
+    "moment": "^2.29.2",
+    "sync-request": "^6.1.0",
+    "testrail-api-client": "^1.0.21",
+    "typescript": "^4.7.4",
+    "wdio-chromedriver-service": "^7.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.19.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-mocha": "^10.0.5",
+    "eslint-plugin-no-only-tests": "^2.6.0",
+    "eslint-plugin-wdio": "^7.19.4",
+    "jsdoc": "^3.6.10"
+  },
+  "scripts": {
+    "testall": "wdio wdio.conf --suite footer,salestracking,shopping,sidebar,storefront,backoffice",
+    "testall-bs": "wdio wdio.conf.browserstack.js --suite footer,salestracking,shopping,sidebar,storefront,backoffice",
+    "generate-docs": "./node_modules/.bin/jsdoc -r -c jsdoc.conf.json",
+    "eslint-all": "eslint --ext .js pages test config lib",
+    "wdio-bo": "npx wdio --suite backoffice",
+    "wdio-footer": "npx wdio --suite footer",
+    "wdio-footsup": "npx wdio --suite footer_sup",
+    "wdio-st": "npx wdio --suite salestracking",
+    "wdio-sb": "npx wdio --suite sidebar",
+    "wdio-sf": "npx wdio --suite storefront"
+  },
+  "keywords": [
+    "Salesfloor",
+    "WebdriverIO",
+    "Automation-tests",
+    "Desktop",
+    "Platform"
+  ],
+  "bugs": {
+    "url": "https://salesfloor.atlassian.net/jira/software/c/projects/QA/boards/56"
+  }
+}

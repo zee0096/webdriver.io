@@ -1,0 +1,42 @@
+{
+  "plugins": [
+    "plugins/summarize" 
+  ],
+  "recurseDepth": 10,
+  "source": {
+    "include": ["test", "pages", "lib"],
+    "exclude": ["config","allure-results", "allure-reports", "coverage", "errorShots", "node_modules", "screenshots"],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
+  "sourceType": "module",
+  "tags": {
+      "allowUnknownTags": true,
+      "dictionaries": ["jsdoc","closure"]
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": true,
+    "default": {
+      "outputSourceFiles": true
+    }
+  },
+  
+  "opts": {
+    "template": "node_modules/@mocha/docdash",
+    "encoding": "utf8",               
+    "recurse": true,
+    "verbose": true,
+    "destination": "./doc/"
+  },
+  "docdash": {
+    "search": true,
+    "collapse": true,
+    "wrap" :  true
+  },
+  "mocha/docdash" : {
+    "search" : true,
+    "typedefs" : true,
+    "private" : false
+  }
+}

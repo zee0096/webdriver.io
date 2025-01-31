@@ -1,0 +1,12 @@
+errorShots
+node_modules
+.DS_Store
+screenshots
+.node-version
+allure-results
+allure-report
+.idea/
+/doc/
+*.log
+.vscode/
+package-lock.json
